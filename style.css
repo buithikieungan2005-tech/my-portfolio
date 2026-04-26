@@ -1,0 +1,92 @@
+:root {
+  --red: #8B0000;
+  --accent: #C1121F;
+  --beige: #F5E6D3;
+  --gold: #D4AF37;
+  --bg: #0D0D0D;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--beige);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 64px;
+  background: linear-gradient(to right, var(--accent), var(--gold));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero h2 {
+  color: var(--accent);
+}
+
+/* CTA */
+.cta a {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* PROJECT */
+.projects {
+  padding: 80px;
+}
+
+.grid {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.4s;
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(193,18,31,0.5);
+}
+
+/* CONTACT */
+.contact {
+  padding: 80px;
+}
+
+/* CURSOR */
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 10px var(--gold);
+}

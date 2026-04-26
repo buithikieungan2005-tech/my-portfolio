@@ -1,0 +1,99 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+// Cấu hình màu sắc & font (Giả định bạn dùng Tailwind)
+const Portfolio = () => {
+  return (
+    <div className="bg-[#FCFBFA] text-[#2D2D2D] font-sans selection:bg-rose-100">
+      
+      {/* 1. NAVIGATION */}
+      <nav className="fixed w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md bg-white/70">
+        <span className="text-xl font-semibold tracking-widest uppercase">Kieu Ngan.</span>
+        <div className="space-x-8 text-sm font-medium uppercase tracking-wider">
+          <a href="#work" className="hover:text-rose-500 transition">Work</a>
+          <a href="#about" className="hover:text-rose-500 transition">About</a>
+          <a href="#contact" className="hover:text-rose-500 transition">Contact</a>
+        </div>
+      </nav>
+
+      {/* 2. HERO SECTION */}
+      <section className="h-screen flex flex-col justify-center px-8 md:px-24">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-rose-500 font-medium mb-4 uppercase tracking-[0.3em]"
+        >
+          UI/UX Designer & IT Student
+        </motion.p>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-5xl md:text-8xl font-serif leading-tight mb-8"
+        >
+          Crafting digital <br /> 
+          <span className="italic text-gray-400 font-light text-4xl md:text-7xl">experiences with</span> <br /> 
+          human-centric logic.
+        </motion.h1>
+      </section>
+
+      {/* 3. FEATURED PROJECTS */}
+      <section id="work" className="px-8 md:px-24 py-20 bg-white">
+        <h2 className="text-sm font-bold uppercase tracking-[0.4em] mb-16 text-gray-400">Featured Projects</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Project 1: TechStore */}
+          <motion.div whileHover={{ y: -10 }} className="group cursor-pointer">
+            <div className="aspect-[4/5] bg-gray-100 overflow-hidden rounded-2xl mb-6">
+              <img src="/api/placeholder/800/1000" alt="TechStore" className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-700" />
+            </div>
+            <h3 className="text-2xl font-serif">TechStore Mobile App</h3>
+            <p className="text-gray-500 mt-2">E-commerce. UX Research. Design System.</p>
+          </motion.div>
+
+          {/* Project 2: MD NAD */}
+          <motion.div whileHover={{ y: -10 }} className="group cursor-pointer md:mt-24">
+            <div className="aspect-[4/5] bg-gray-100 overflow-hidden rounded-2xl mb-6">
+              <img src="/api/placeholder/800/1000" alt="MD NAD" className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-700" />
+            </div>
+            <h3 className="text-2xl font-serif">MD NAD Landing Page</h3>
+            <p className="text-gray-500 mt-2">Personal Branding. AI-Driven. Conversion.</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. ABOUT SECTION (Tóm tắt từ CV) */}
+      <section id="about" className="px-8 md:px-24 py-32 grid grid-cols-1 md:grid-cols-2 gap-20 bg-[#F9F7F5]">
+        <div>
+          <h2 className="text-3xl font-serif mb-6">Bridging the gap between code and aesthetic.</h2>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            Lợi thế từ sinh viên CNTT giúp mình hiểu rõ giới hạn kỹ thuật của Front-end, 
+            từ đó kiến tạo những giao diện không chỉ "đẹp" mà còn có tính khả thi cao.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-4">
+          {['Figma', 'Framer', 'React', 'Tailwind', 'UX Research', 'Agile'].map(skill => (
+            <span key={skill} className="px-4 py-2 border border-gray-200 rounded-full text-sm uppercase tracking-wider">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* 5. FOOTER */}
+      <footer id="contact" className="px-8 py-20 text-center">
+        <p className="text-gray-400 mb-4">Wanna collaborate?</p>
+        <a href="mailto:buithikieungan2005@gmail.com" className="text-3xl md:text-5xl font-serif hover:text-rose-500 transition">
+          buithikieungan2005@gmail.com
+        </a>
+        <div className="mt-12 space-x-6 text-sm text-gray-500">
+          <a href="#">LinkedIn</a>
+          <a href="#">Behance</a>
+          <a href="#">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Portfolio;
