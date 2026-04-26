@@ -1,63 +1,160 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bùi Thị Kiều Ngân | UI/UX Designer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Bui Thi Kieu Ngan | UI/UX Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        background: '#FCFBFA',
+                        primary: '#2D2D2D',
+                        accent: '#D4A3A3', // Soft Dusty Rose
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FCFBFA; color: #2D2D2D; }
+        .hero-img-placeholder {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        }
+    </style>
 </head>
-<body>
-    <nav>
-        <div class="logo">KIEU NGAN.</div>
-        <ul>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#projects">Dự án</a></li>
-            <li><a href="#certs">Chứng chỉ</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
+<body class="antialiased selection:bg-rose-100 selection:text-rose-900">
+
+    <nav class="fixed w-full z-50 px-6 py-5 md:px-16 flex justify-between items-center backdrop-blur-md bg-white/70 border-b border-gray-100">
+        <a href="#" class="text-xl font-semibold tracking-widest uppercase text-primary hover:text-accent transition duration-300">Ngan.</a>
+        <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-gray-500">
+            <a href="#about" class="hover:text-accent transition duration-300">About</a>
+            <a href="#work" class="hover:text-accent transition duration-300">Work</a>
+            <a href="#certificates" class="hover:text-accent transition duration-300">Certificates</a>
+            <a href="#contact" class="hover:text-accent transition duration-300">Contact</a>
+        </div>
     </nav>
 
-    <header id="about">
-        <div class="hero">
-            <p class="subtitle">UI/UX Designer & IT Student</p>
-            <h1>Kiến tạo trải nghiệm số <br><span>từ tư duy hệ thống.</span></h1>
-            <p class="description">Chào bạn, mình là Kiều Ngân. Một người yêu thiết kế và am hiểu kỹ thuật.</p>
+    <section class="min-h-screen flex items-center justify-center px-6 md:px-16 pt-24">
+        <div class="max-w-4xl text-center flex flex-col items-center">
+            <img src="https://ui-avatars.com/api/?name=Kieu+Ngan&background=F3E8E8&color=D4A3A3&size=150" alt="Bui Thi Kieu Ngan" class="w-32 h-32 rounded-full mb-8 object-cover shadow-sm border-4 border-white">
+            
+            <p class="text-accent font-medium mb-4 uppercase tracking-[0.2em] text-sm">Hybrid UI/UX Designer</p>
+            <h1 class="text-4xl md:text-7xl font-serif leading-tight mb-6">
+                Hi, I'm Bui Thi Kieu Ngan 👋 <br>
+                <span class="italic text-gray-400 font-light text-3xl md:text-5xl mt-2 block">Crafting digital experiences.</span>
+            </h1>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+                Bridging the gap between logical system architecture and empathetic, user-centered design. I craft intuitive and aesthetic digital products.
+            </p>
         </div>
-    </header>
+    </section>
 
-    <section id="projects">
-        <h2>Dự án tâm đắc</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="img-placeholder">TechStore Mockup</div>
-                <h3>TechStore App</h3>
-                <p>Nghiên cứu UX & Design System cho nền tảng thương mại điện tử.</p>
+    <section id="about" class="py-24 px-6 md:px-16 bg-white">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-4">About Me</h2>
+                <h3 class="text-3xl font-serif mb-6 leading-snug">From Code Logic to User Empathy.</h3>
+                <p class="text-gray-600 leading-relaxed font-light mb-6">
+                    I am a third-year IT student at HCMUE transitioning to UI/UX Design. My IT background gives me a deep understanding of system logic and front-end limits, but my passion lies in solving user problems.
+                </p>
+                <p class="text-gray-600 leading-relaxed font-light mb-8">
+                    I am expanding my expertise in Figma, Framer, and Design Systems, actively seeking a UI/UX Intern role to contribute to real-world products.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-gray-50 rounded-full text-xs uppercase tracking-wider text-gray-600 border border-gray-100">UX Research</span>
+                    <span class="px-4 py-2 bg-gray-50 rounded-full text-xs uppercase tracking-wider text-gray-600 border border-gray-100">Figma</span>
+                    <span class="px-4 py-2 bg-gray-50 rounded-full text-xs uppercase tracking-wider text-gray-600 border border-gray-100">Design Systems</span>
+                    <span class="px-4 py-2 bg-gray-50 rounded-full text-xs uppercase tracking-wider text-gray-600 border border-gray-100">v0.dev</span>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="img-placeholder">MD NAD Mockup</div>
-                <h3>MD NAD Landing Page</h3>
-                <p>Tối ưu tỷ lệ chuyển đổi bằng Storytelling và AI v0.</p>
+            <div class="aspect-square bg-gray-100 rounded-3xl hero-img-placeholder shadow-inner"></div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 px-6 md:px-16 bg-[#FCFBFA]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-16 text-center">Selected Works</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div class="group">
+                    <div class="aspect-[4/3] bg-gray-200 rounded-2xl mb-6 overflow-hidden relative">
+                        <img src="https://placehold.co/800x600/e2e8f0/64748b?text=TechStore+Mockup" alt="TechStore Mockup" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="px-2">
+                        <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Lead UI/UX • E-commerce</p>
+                        <h3 class="text-2xl font-serif mb-3">TechStore Platform</h3>
+                        <p class="text-gray-500 font-light text-sm mb-6 leading-relaxed">
+                            Optimized checkout flows and built a scalable Design System using Figma Auto Layout to reduce drop-off rates.
+                        </p>
+                        <a href="https://v0-landing-page-design-red-psi.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2.5 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:border-accent hover:text-accent transition-all duration-300 shadow-sm">
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group md:mt-16">
+                    <div class="aspect-[4/3] bg-gray-200 rounded-2xl mb-6 overflow-hidden relative">
+                        <img src="https://placehold.co/800x600/e2e8f0/64748b?text=MD+NAD+Mockup" alt="MD NAD Mockup" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="px-2">
+                        <p class="text-xs font-bold uppercase tracking-widest text-accent mb-2">Solo UI/UX • Landing Page</p>
+                        <h3 class="text-2xl font-serif mb-3">MD NAD Experience</h3>
+                        <p class="text-gray-500 font-light text-sm mb-6 leading-relaxed">
+                            Designed a high-conversion UI and leveraged v0 (Vercel) for rapid AI-powered front-end generation.
+                        </p>
+                        <a href="https://v0-landing-page-design-red-psi.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2.5 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:border-accent hover:text-accent transition-all duration-300 shadow-sm">
+                            View Live Demo
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="certs">
-        <h2>Chứng chỉ chuyên môn</h2>
-        <ul>
-            <li>LinkedIn Learning: Design User Experiences with Figma</li>
-            <li>Domestika: UX UI Design for Landing Pages</li>
-        </ul>
+    <section id="certificates" class="py-24 px-6 md:px-16 bg-white border-y border-gray-100">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-12">Continuous Learning</h2>
+            <div class="space-y-6 text-left md:text-center">
+                <div class="pb-6 border-b border-gray-100">
+                    <h4 class="text-lg font-serif text-primary">Design User Experiences with Figma</h4>
+                    <p class="text-gray-500 text-sm mt-1">LinkedIn Learning</p>
+                </div>
+                <div class="pb-6 border-b border-gray-100">
+                    <h4 class="text-lg font-serif text-primary">UX UI Design for Landing Pages</h4>
+                    <p class="text-gray-500 text-sm mt-1">Domestika</p>
+                </div>
+                <div class="pb-6">
+                    <h4 class="text-lg font-serif text-primary">Google UX Design (In Progress)</h4>
+                    <p class="text-gray-500 text-sm mt-1">Coursera</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer id="contact">
-        <h2>Bắt đầu một dự án mới?</h2>
-        <p>Email: buithikieungan2005@gmail.com</p>
-        <div class="socials">
-            <a href="https://linkedin.com/in/bui-thi-kieu-ngan-4773613a9">LinkedIn</a>
-            <a href="#">Behance</a>
-            <a href="#">GitHub</a>
+    <footer id="contact" class="py-24 px-6 md:px-16 bg-[#FCFBFA] text-center">
+        <h2 class="text-3xl md:text-5xl font-serif mb-8 text-primary">Let's build something <br><span class="italic text-gray-400">great together.</span></h2>
+        <a href="mailto:buithikieungan2005@gmail.com" class="text-lg md:text-xl text-gray-600 hover:text-accent border-b-2 border-transparent hover:border-accent pb-1 transition duration-300">
+            buithikieungan2005@gmail.com
+        </a>
+        
+        <div class="mt-16 flex justify-center space-x-8 text-sm font-semibold uppercase tracking-widest text-gray-400">
+            <a href="https://www.linkedin.com/in/bui-thi-kieu-ngan-4773613a9/" target="_blank" class="hover:text-primary transition duration-300">LinkedIn</a>
+            <a href="https://github.com/ngan-bui" target="_blank" class="hover:text-primary transition duration-300">GitHub</a>
+            <a href="#" class="hover:text-primary transition duration-300">Behance</a>
         </div>
+        <p class="mt-12 text-xs text-gray-400 font-light">© 2026 Bui Thi Kieu Ngan. Designed with Logic & Empathy.</p>
     </footer>
+
 </body>
 </html>
